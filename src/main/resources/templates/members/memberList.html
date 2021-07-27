@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<body>
+	<div class="container">
+	<h1 class="form-signin-heading">Spring List Board</h1>
+			<nav class="navbar navbar-inverse">
+				<div class="container">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed"
+							data-toggle="collapse" data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span> <span
+								class="icon-bar"></span> <span class="icon-bar"></span> <span
+								class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="/">회원 기능</a>
+					</div>
+					<div class="navbar-collapse collapse">
+						<ul class="nav navbar-nav">
+							<li><a href="/members/new">회원 가입</a></li>
+							<li class="active"><a href="/members">회원 목록</a></li>
+						</ul>
+					</div>
+					<!--/.nav-collapse -->
+				</div>
+			</nav>
+		<div>
+			<table class="table">
+				<thead>
+					<tr>
+						<th>#</th>
+						<td> &nbsp;&nbsp;</td>
+						<th>이름</th>
+						<td> &nbsp;&nbsp;</td>
+						<th>제목</th>
+						<td> &nbsp;&nbsp;</td>
+						<th>날짜</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="member : ${members}">
+						<td th:text="${member.id}"></td>
+						<td> &nbsp;&nbsp;</td>
+						<td th:text="${member.name}"></td>
+						<td> &nbsp;&nbsp;</td>
+						<td th:text="${member.title}"></td>
+						<td> &nbsp;&nbsp;</td>
+						<td th:text="${member.date}"></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<div class="container">
+		<button type="button" class="btn btn-link"><a href="/">HOME</a></button>
+	</div>
+	<!-- /container -->
+</body>
+</html>
