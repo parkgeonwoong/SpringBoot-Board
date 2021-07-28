@@ -53,6 +53,11 @@ Eclipse is hosted on many mirrors around the world. Please select the one closes
 - Repository : DB에 접근, 도메인 객체를 DB에 저장하고 관리
 - Domain : 비즈니스 도메인 객체
 ```
+<br />
+
+### 🔸 DB Model
+<img src="https://user-images.githubusercontent.com/65653053/127244644-2233faa3-fc14-4f95-8cbc-eb3f2ea34f34.png" width="40%" />
+<br />
 
 ### 🔸 Features
 - [x] 실행 화면
